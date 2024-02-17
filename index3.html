@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parking Complaint Form</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <style>
+      /* Basic CSS for styling the form */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+
+        height: 100vh;
+        background-image: url(back.jpg);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .container {
+        max-width: 600px;
+        padding: 40px;
+        background-color: rgba(255, 255, 255, 0.9);
+        border-radius: 8px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        animation: fadeIn 0.5s ease;
+      }
+
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #333;
+      }
+
+      label {
+        font-weight: bold;
+        margin-bottom: 5px;
+        display: block;
+        color: #333;
+      }
+
+      input[type="text"],
+      input[type="datetime-local"],
+      textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        transition: border-color 0.3s ease;
+      }
+
+      input[type="file"] {
+        margin-top: 10px;
+      }
+
+      .btn-submit {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #4caf50;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+      }
+
+      .btn-submit:hover {
+        background-color: #45a049;
+      }
+
+      .input-container {
+        position: relative;
+      }
+
+      .input-container i {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 10px;
+        color: #888;
+        transition: color 0.3s ease;
+      }
+
+      .input-container input:focus,
+      .input-container textarea:focus {
+        border-color: #4caf50;
+      }
+
+      .input-container input:focus + i,
+      .input-container textarea:focus + i {
+        color: #4caf50;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>
+        <i class="fas fa-exclamation-triangle"></i> Submit Parking Complaint
+      </h2>
+      <form id="complaintForm">
+        <div class="input-container">
+          <label for="name"><i class="fas fa-user"></i> Your Full Name:</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            placeholder="Your name"
+          />
+        </div>
+
+        <div class="input-container">
+          <label for="contact"
+            ><i class="fas fa-phone"></i> Contact Number:</label
+          >
+          <input
+            type="text"
+            id="contact"
+            name="contact"
+            required
+            placeholder="123-456-7890"
+          />
+        </div>
+
+        <div class="input-container">
+          <label for="location"
+            ><i class="fas fa-map-marker-alt"></i> Location of Incident:</label
+          >
+          <input
+            type="text"
+            id="location"
+            name="location"
+            required
+            placeholder="123 Main St, City, State"
+          />
+        </div>
+
+        <div class="input-container">
+          <label for="dateTime"
+            ><i class="fas fa-calendar-alt"></i> Date and Time:</label
+          >
+          <input type="datetime-local" id="dateTime" name="dateTime" required />
+        </div>
+
+        <div class="input-container">
+          <label for="description"
+            ><i class="fas fa-comment-alt"></i> Description:</label
+          >
+          <textarea
+            id="description"
+            name="description"
+            rows="4"
+            required
+            placeholder="Please describe the incident..."
+          ></textarea>
+        </div>
+
+        <div class="input-container">
+          <label for="evidence"
+            ><i class="fas fa-file-upload"></i> Upload Evidence:</label
+          >
+          <input type="file" id="evidence" name="evidence" />
+        </div>
+
+        <button type="submit" class="btn-submit">
+          <i class="fas fa-paper-plane"></i> Submit Complaint
+        </button>
+      </form>
+    </div>
+
+    <script>
+      // JavaScript for form submission
+      document
+        .getElementById("complaintForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); // Prevent default form submission
+
+          // Get form data
+          const formData = new FormData(this);
+
+          // You can handle form submission here, such as sending data to server via AJAX
+          // For now, let's just log the form data
+          for (var pair of formData.entries()) {
+            console.log(pair[0] + ": " + pair[1]);
+          }
+
+          // Clear the form fields after submission (optional)
+          this.reset();
+        });
+    </script>
+  </body>
+</html>

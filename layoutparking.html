@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="layoutparking.css">
+</head>
+
+<body>
+    <div id="navbar">
+    </div>
+    <div id="main">
+        <div id="mainmap">
+            <div id="grid1">
+                <div class="grid_item" id="176"></div>
+                <div class="grid_item" id="177"></div>
+                <div class="grid_item" id="178"></div>
+                <div class="grid_item" id="179"></div>
+                <div class="grid_item" id="180"></div>
+                <div class="grid_item" id="181"></div>
+                <div class="grid_item" id="182"></div>
+                <div class="grid_item" id="183"></div>
+                <div class="grid_item" id="184"></div>
+                <div class="grid_item" id="185"></div>
+                <div class="grid_item" id="186"></div>
+                <div class="grid_item" id="187"></div>
+                <div class="grid_item" id="188"></div>
+
+            </div>
+            <div id="grid2">
+                <div class="grid_item" id="207"></div>
+                <div class="grid_item" id="208"></div>
+                <div class="grid_item" id="209"></div>
+                <div class="grid_item" id="210"></div>
+                <div class="grid_item" id="211"></div>
+
+            </div>
+            <div id="grid3">
+                <div class="grid_item" id="206"></div>
+                <div class="grid_item" id="207"></div>
+            </div>
+            <div id="grid4">
+                <div class="grid_item" id="201"></div>
+                <div class="grid_item" id="200"></div>
+            </div>
+            <div id="grid5">
+                <div class="grid_item1" id="204"></div>
+                <div class="grid_item1" id="203"></div>
+                <div class="grid_item1" id="202"></div>
+            </div>
+            <div id="grid6">
+                <div class="grid_item_vert" id="189"></div>
+                <div class="grid_item_vert" id="190"></div>
+                <div class="grid_item_vert" id="191"></div>
+                <div class="grid_item_vert" id="192"></div>
+                <div class="grid_item_vert" id="193"></div>
+                <div class="grid_item_vert" id="194"></div>
+                <div class="grid_item_vert" id="195"></div>
+                <div class="grid_item_vert" id="196"></div>
+                <div class="grid_item_vert" id="197"></div>
+                <div class="grid_item_vert" id="198"></div>
+                <div class="grid_item_vert" id="199"></div>
+            </div>
+            <div id="grid7">
+                <div class="grid_item_vert" id="175"></div>
+                <div class="grid_item_vert" id="174"></div>
+                <div class="grid_item_vert" id="173"></div>
+                <div class="grid_item_vert" id="172"></div>
+                <div class="grid_item_vert" id="171"></div>
+            </div>
+            <div id="grid8">
+                <div class="grid_item2" id="219"></div>
+                <div class="grid_item2" id="218"></div>
+                <div class="grid_item2" id="217"></div>
+                <div class="grid_item2" id="216"></div>
+                <div class="grid_item2" id="215"></div>
+            </div>
+            <!-- <img id="map" src="CAR-PARKING-PLAN-SERVICE-BY.jpg" alt=""> -->
+        </div>
+        <div id="form_container">
+            <div id="main_form">
+                <form>
+                    <input type="text" id="noplate" width="40rem" placeholder="Enter your number plate">
+                    <div id="license">
+                        <span>Upload your License</span>
+                        <input type="file" id="license" width="20rem">
+                    </div>
+                    <div id="mot">
+                        <input type="button" class="button" id="bikebutton"><ion-icon name="bicycle-outline"
+                            class="bikeimg"></ion-icon>
+                        <input type="button" class="button" id="carbutton"><ion-icon name="car-outline"
+                            class="carimg"></ion-icon>
+                    </div>
+                    <div id="timeslot">
+                        <input type="time" placeholder="Book from (HH:MM)" id="inittime">
+                        <input type="time" placeholder="Book upto (HH:MM)" id="fintime">
+                    </div>
+                    <button class="myButton">Book Slot</button>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+    <script src="layoutparking.js"></script>
+</body>
+
+</html>
